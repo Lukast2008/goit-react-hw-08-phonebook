@@ -6,6 +6,7 @@ import {
 } from 'redux/contact/contactSelectors';
 import css from './ContactList.module.css';
 
+
 export const ContactList = () => {
   const contacts = useSelector(selectAllContacts);
 
@@ -25,3 +26,4 @@ export const ContactList = () => {
     </ul>
   );
 };
+
