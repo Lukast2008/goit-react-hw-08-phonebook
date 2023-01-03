@@ -46,34 +46,32 @@ export const ContactEditor = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    dispatch(addContact({ name: nameContact, phone: number }));
-
+    dispatch(addContact({ name: nameContact, number: number }));
     reset();
   };
 
   return (
     <>
-    <h2>PhoneBook</h2>
-    <form className={css.form} onSubmit={handleSubmit}>
-      {inputName.map(({ name, pattern, title }, index) => (
-        <label key={name}>
-          <input
-            type="text"
-            name={name}
-            placeholder={name}
-            value={!index ? nameContact : number}
-            onChange={onChange}
-            pattern={pattern}
-            title={title}
-            required
-          ></input>
-        </label>
-      ))}
-      <button type="submit" className={css.button}>
-        Add Contact
-      </button>
-    </form>
+      <h2>PhoneBook</h2>
+      <form className={css.form} onSubmit={handleSubmit}>
+        {inputName.map(({ name, pattern, title }, index) => (
+          <label key={name}>
+            <input
+              type="text"
+              name={name}
+              placeholder={name}
+              value={!index ? nameContact : number}
+              onChange={onChange}
+              pattern={pattern}
+              title={title}
+              required
+            ></input>
+          </label>
+        ))}
+        <button type="submit" className={css.button}>
+          Add Contact
+        </button>
+      </form>
     </>
   );
 };

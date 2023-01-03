@@ -1,9 +1,12 @@
 
 .form {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 4px;
-    margin-bottom: 12px;
+    gap:10px;
+    background-color: burlywood;
+    height: 150px;
+    justify-content: center;
   }
   
   .input {
@@ -24,13 +27,17 @@
     outline: none;
     padding: 0 8px;
     border-radius: 4px;
-    background-color: #3f51b5;
+    background-color:coral;
     color: #fff;
+    width: 200px;
+    margin: 0 auto;
+    height: 25px;
+
   }
   
   .button:hover,
   .button:focus {
-    background-color: #303f9f;
+    background-color:chocolate;
   }
   
   .button:active {
