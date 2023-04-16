@@ -27,6 +27,7 @@ const contactsSlice = createSlice({
     [addContact.pending](state) {
       state.isLoading = true;
     },
+    
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
